@@ -9790,7 +9790,7 @@ var MainPageContainer = function (_React$Component) {
             var _this2 = this;
 
             var url = "https://cdn.rawgit.com/santosh-suresh/39e58e451d724574f3cb/raw/784d83b460d6c0150e338c34713f3a1c2371e20a/assignment.json";
-            _utils2.default.getRequest(function (data) {
+            _utils2.default.getRequest(url, function (data) {
                 console.log(data, "data");
                 _this2.allData = data.items;
             });
@@ -22469,17 +22469,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Utils = {
     getRequest: function getRequest(url, callback) {
-        url = "https://cdn.rawgit.com/santosh-suresh/39e58e451d724574f3cb/raw/784d83b460d6c0150e338c34713f3a1c2371e20a/assignment.json";
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
-            //console.log('hi',this.readyState,this.status,this)
             if (this.readyState == 4 && this.status == 200) {
                 console.log(this.responseText, "response obj");
-                return callback("true");
+                return callback(JSON.parse(this.responseText));
             }
         };
         xhttp.open("GET", url, true);
-        //xhttp.setRequestHeader('Content-Type', 'application/json')
         xhttp.send();
     },
     readFromTextFile: function readFromTextFile(callback) {
