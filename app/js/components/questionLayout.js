@@ -8,7 +8,7 @@ class QuestionLayout extends React.Component {
     }
     
   render() {
-      
+      console.log(this.props,"question layout")
     return (
         <div className="board">
             <div className="question">{this.props.question.current.text}</div>

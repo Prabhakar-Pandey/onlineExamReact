@@ -9826,6 +9826,7 @@ var MainPageContainer = function (_React$Component) {
     }, {
         key: 'setdatatostate',
         value: function setdatatostate(data) {
+            console.log(data, "data");
             this.setState({ data: data });
             this.setState({ current: data[0] });
             this.setState({ currentIndex: 0 });
@@ -22582,6 +22583,7 @@ var QuestionLayout = function (_React$Component) {
         value: function render() {
             var _this2 = this;
 
+            console.log(this.props, "question layout");
             return _react2.default.createElement(
                 'div',
                 { className: 'board' },

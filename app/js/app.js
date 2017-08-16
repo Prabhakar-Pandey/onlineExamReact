@@ -18,6 +18,7 @@ class MainPageContainer extends React.Component {
         });
     }
     setdatatostate(data){
+        console.log(data,"data")
         this.setState({data:data});
         this.setState({current:data[0]});
         this.setState({currentIndex:0});
