@@ -14,7 +14,7 @@ class MainPageContainer extends React.Component {
     componentWillMount(){
         let url = "https://cdn.rawgit.com/santosh-suresh/39e58e451d724574f3cb/raw/784d83b460d6c0150e338c34713f3a1c2371e20a/assignment.json";
         Utils.getRequest(url,(data)=>{
-            console.log(data,data[0],"data")
+            console.log(data,data[0],"data render")
             this.setState({data:data});
             this.setState({current:data[0]})
         });
