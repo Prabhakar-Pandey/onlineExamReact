@@ -3,7 +3,7 @@ var Utils = {
     getRequest:function(url,callback){
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
-            console.log('hi',this)
+            console.log('hi',this.readyState,this.status,this)
             if (this.readyState == 4 && this.status == 200) {
             console.log(this.responseText,"response obj");
                 return callback("true")
