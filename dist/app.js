@@ -9817,7 +9817,7 @@ var MainPageContainer = function (_React$Component) {
 
             var url = "https://cdn.rawgit.com/santosh-suresh/39e58e451d724574f3cb/raw/784d83b460d6c0150e338c34713f3a1c2371e20a/assignment.json";
             _utils2.default.getRequest(url, function (data) {
-                console.log(data, "data");
+                console.log(data, data[0], "data");
                 _this2.setState({ data: data });
                 _this2.setState({ current: data[0] });
             });
