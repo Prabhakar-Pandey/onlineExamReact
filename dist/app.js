@@ -22539,7 +22539,7 @@ var QuestionLayout = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (QuestionLayout.__proto__ || Object.getPrototypeOf(QuestionLayout)).call(this, props));
 
-        console.log(_this.props, "props");
+        console.log(_this.props, "props data");
         return _this;
     }
 
