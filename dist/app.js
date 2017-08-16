@@ -9788,9 +9788,10 @@ var MainPageContainer = function (_React$Component) {
         key: 'componentWillMount',
         value: function componentWillMount() {
             var url = "https://cdn.rawgit.com/santosh-suresh/39e58e451d724574f3cb/raw/784d83b460d6c0150e338c34713f3a1c2371e20a/assignment.json";
+            var self = this;
             _utils2.default.getRequest(url, function (data) {
                 console.log(data, "data");
-                //this.allData=data.items;
+                self.allData = data.items;
             });
         }
     }, {
@@ -22470,7 +22471,7 @@ var Utils = {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                console.log(this.responseText, "response obj");
+                console.log(callback);
                 return callback(JSON.parse(this.responseText));
             }
         };
