@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 class QuestionLayout extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props,"props data")
+        console.log(this.props,"props data new")
     }
     
   render() {
