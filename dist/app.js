@@ -9802,7 +9802,11 @@ var MainPageContainer = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (MainPageContainer.__proto__ || Object.getPrototypeOf(MainPageContainer)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            current: {},
+            data: [],
+            resultInput: []
+        };
         return _this;
     }
 
@@ -9814,13 +9818,13 @@ var MainPageContainer = function (_React$Component) {
             var url = "https://cdn.rawgit.com/santosh-suresh/39e58e451d724574f3cb/raw/784d83b460d6c0150e338c34713f3a1c2371e20a/assignment.json";
             _utils2.default.getRequest(url, function (data) {
                 console.log(data, "data");
-                _this2.state = data;
+                _this2.setState({ data: data });
+                _this2.setState({ current: data[0] });
             });
         }
     }, {
         key: 'render',
         value: function render() {
-            console.log(this.state);
             return _react2.default.createElement(
                 'div',
                 null,
