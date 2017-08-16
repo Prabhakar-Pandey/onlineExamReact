@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// component is responsible to show images in tiles
+// component is responsible to show result to UI
 class QuestionLayout extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props,"props result window")
     }
     
   render() {

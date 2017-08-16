@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+//This component is responsible for rendering question to UI
 class QuestionLayout extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props,"props data new")
     }
     
   render() {
-      console.log(this.props,"question layout")
     return (
         <div className="board">
             <div className="question">{this.props.question.current.text}</div>
