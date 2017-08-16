@@ -1,5 +1,8 @@
 .board{
-    width: 400px;
-    height: 200px;
-    background-image: url('../image/bord.png')
+    width: 640px;
+    height: 350px;
+    background-image: url(../image/bord.png);
+    background-size: initial;
+    padding: 30px;
+    background-repeat: no-repeat;
 }
