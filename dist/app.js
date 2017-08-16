@@ -9851,13 +9851,18 @@ var MainPageContainer = function (_React$Component) {
             var _this3 = this;
 
             var screenToShow;
-            if (!this.state.showRes) {
-                screenToShow = _react2.default.createElement(_questionLayout2.default, { question: this.state, changequestion: function changequestion(res) {
-                        return _this3.changequestion(res);
-                    } });
+            if (this.state.current) {
+                if (!this.state.showRes) {
+                    screenToShow = _react2.default.createElement(_questionLayout2.default, { question: this.state, changequestion: function changequestion(res) {
+                            return _this3.changequestion(res);
+                        } });
+                } else {
+                    screenToShow = _react2.default.createElement(_resultWindow2.default, { result: this.resultArray, question: this.state });
+                }
             } else {
-                screenToShow = _react2.default.createElement(_resultWindow2.default, { result: this.resultArray, question: this.state });
+                screenToShow = "Loading..";
             }
+
             return _react2.default.createElement(
                 'div',
                 null,

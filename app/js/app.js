@@ -40,11 +40,16 @@ class MainPageContainer extends React.Component {
    
   render() {
       var screenToShow;
+      if(this.state.current){
         if (!this.state.showRes) {
-        screenToShow = <QuestionLayout question={this.state} changequestion={(res) => this.changequestion(res)}/>;
+            screenToShow = <QuestionLayout question={this.state} changequestion={(res) => this.changequestion(res)}/>;
         } else {
-        screenToShow = <ResulWindow result={this.resultArray} question={this.state} />;
+            screenToShow = <ResulWindow result={this.resultArray} question={this.state} />;
         }
+      }else{
+          screenToShow="Loading.."
+      }
+        
       return (
         <div>
             {screenToShow}
