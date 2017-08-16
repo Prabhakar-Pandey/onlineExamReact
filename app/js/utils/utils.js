@@ -7,7 +7,7 @@ var Utils = {
             //console.log('hi',this.readyState,this.status,this)
             if (this.readyState == 4 && this.status == 200) {
                 console.log(this.responseText,"response obj");
-                //return callback("true")
+                return callback("true")
             }
         };
         xhttp.open("GET", url, true);
