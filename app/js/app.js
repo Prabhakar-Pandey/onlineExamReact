@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Utils from './utils/utils';
-
+import QuestionLayout from './components/questionLayout'
 class MainPageContainer extends React.Component {
     constructor(props) {
         super(props);
@@ -11,10 +11,9 @@ class MainPageContainer extends React.Component {
     }
     componentWillMount(){
         let url = "https://cdn.rawgit.com/santosh-suresh/39e58e451d724574f3cb/raw/784d83b460d6c0150e338c34713f3a1c2371e20a/assignment.json";
-        let self = this;
         Utils.getRequest(url,(data)=>{
             console.log(data,"data")
-            self.allData=data.items;
+            this.allData=data;
         });
     }
    
@@ -22,7 +21,7 @@ class MainPageContainer extends React.Component {
      
       return (
         <div>
-            hello world
+            <QuestionLayout questions={this.allData} />
         </div>
         );
     
